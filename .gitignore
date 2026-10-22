@@ -1,0 +1,21 @@
+# Build output
+build/
+*.obj
+*.res
+*.exe
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Editor / IDE
+.vs/
+.vscode/
+*.user
+
+# Python helpers
+__pycache__/
+*.pyc
+
+# Local scratch
+*.log
