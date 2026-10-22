@@ -8,3 +8,4 @@ HWND panel_show(HINSTANCE hInst, BOOL restricted);
 void panel_close(void);
 BOOL panel_visible(void);
 void panel_refresh(void);
+void panel_sync(void);

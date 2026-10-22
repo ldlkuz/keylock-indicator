@@ -592,3 +592,18 @@ void panel_refresh(void)
     if (g_panel && IsWindow(g_panel))
         InvalidateRect(g_panel, NULL, FALSE);
 }
+
+/* Called from the keyboard-hook notification so the lamps react immediately
+ * instead of waiting for the 100 ms panel timer. */
+void panel_sync(void)
+{
+    LightState now;
+
+    if (!g_panel || !IsWindow(g_panel))
+        return;
+    now = keystate_sample();
+    if (!keystate_equal(now, g_shown)) {
+        g_shown = now;
+        InvalidateRect(g_panel, NULL, FALSE);
+    }
+}

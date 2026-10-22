@@ -221,10 +221,12 @@ static LRESULT CALLBACK wnd_proc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
 
     case WM_KEYSTATE_CHANGED: {
         LightState now = keystate_sample();
+
         if (!keystate_equal(now, g_state)) {
             g_state = now;
             update_tray();
         }
+        panel_sync();
         return 0;
     }
 
