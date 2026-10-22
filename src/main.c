@@ -263,7 +263,7 @@ static LRESULT CALLBACK wnd_proc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
                 break;
             case IDM_ABOUT:
                 MessageBoxW(hwnd,
-                            L"键盘指示灯 v0.1\n\n"
+                            L"键盘指示灯 v0.1.1\n\n"
                             L"托盘图标是三根横条，从上到下依次对应：\n"
                             L"Num Lock / Caps Lock / Scroll Lock\n\n"
                             L"绿色 = 开启，灰色 = 关闭。\n"
